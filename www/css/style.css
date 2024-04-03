@@ -1,1 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    overflow: hidden;
+}
+
+.campo {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10% 0;
+}
+
+.campo-parte {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.jogador {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+}
+
+/* TEMPORARIO: Colorindo cada jogador*/
+.jogador-atacante {
+    background-color: red;
+}
+
+.jogador-meio {
+    background-color: gold;
+}
+
+.jogador-zagueiro {
+    background-color: blue;
+}
+
+.jogador-lateral {
+    background-color: blueviolet;
+}
+
+.jogador-goleiro {
+    background-color: green;
+}
