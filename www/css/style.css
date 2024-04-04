@@ -10,6 +10,7 @@
 
 body {
     overflow: hidden;
+    height: 100vh;
 }
 
 .campo {
@@ -88,4 +89,34 @@ body {
 
 .jogador-goleiro {
     background-color: green;
+}
+
+/* Overlay preto */
+.black-overlay {
+    background-color: black;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.2;
+}
+
+.black-overlay.active {
+    top: 0;
+}
+
+/* Lista de Jogadores */
+.lista-jogadores {
+    position: absolute;
+    bottom: 0;
+    height: 75vh;
+    width: 100%;
+    border-radius: 48px 48px 0 0;
+    background-color: #F2F2F2;
+    transform: translateY(100%);
+    transition: all 0.2s ease-in-out;
+}
+
+.lista-jogadores.active {
+    transform: translateY(0%);
 }
