@@ -13,24 +13,30 @@
 
 <body>
     <div class="campo">
-        <div class="campo-parte campo-ataque">
+        <div class="campo-parte campo-cima">
             <input type="button" class="jogador jogador-atacante" id="atacante1" />
             <input type="button" class="jogador jogador-atacante" id="atacante2" />
             <input type="button" class="jogador jogador-atacante" id="atacante3" />
         </div>
         <div class="campo-parte campo-meio">
-            <input type="button" class="jogador jogador-meio" id="meio1" />
-            <input type="button" class="jogador jogador-meio" id="meio2" />
-            <input type="button" class="jogador jogador-meio" id="meio3" />
+            <div class="linha1">
+                <input type="button" class="jogador jogador-meio" id="meio3" />
+            </div>
+            <div class="linha2">
+                <input type="button" class="jogador jogador-meio" id="meio1" />
+                <input type="button" class="jogador jogador-meio" id="meio2" />
+            </div>
         </div>
-        <div class="campo-parte campo-zagueiro">
-            <input type="button" class="jogador jogador-lateral" id="lateralEsquerda" />
-            <input type="button" class="jogador jogador-zagueiro" id="zagueiro2" />
-            <input type="button" class="jogador jogador-zagueiro" id="zagueiro3" />
-            <input type="button" class="jogador jogador-lateral" id="lateralDireita" />
-        </div>
-        <div class="campo-parte campo-goleiro">
-            <input type="button" class="jogador jogador-goleiro" id="goleiro" />
+        <div class="campo-parte campo-baixo">
+            <div class="linha1">
+                <input type="button" class="jogador jogador-lateral" id="lateralEsquerda" />
+                <input type="button" class="jogador jogador-zagueiro" id="zagueiro2" />
+                <input type="button" class="jogador jogador-zagueiro" id="zagueiro3" />
+                <input type="button" class="jogador jogador-lateral" id="lateralDireita" />
+            </div>
+            <div class="linha2">
+                <input type="button" class="jogador jogador-goleiro" id="goleiro" />
+            </div>
         </div>
     </div>
 </body>
