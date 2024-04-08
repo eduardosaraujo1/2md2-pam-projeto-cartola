@@ -28,15 +28,20 @@ class Campo {
             2- para cada goleiro
         */
         // this.redefinirRenderCampo();
-        for (let idPos in this.jogadoresEmCampo) {
-            const idJogador = this.jogadoresEmCampo[idPos];
+        // Para cada posição no campo, procurar um jogador, se for um campo vazio pular.
+        // Se achar um jogador,
+        for (let posicaoCampo in this.jogadoresEmCampo) {
+            const idJogador = this.jogadoresEmCampo[posicaoCampo];
+            if (idJogador === 0) continue;
             const jogador = jogadores.find((j) => j.id === idJogador);
             if (jogador == undefined) {
-                continue;
+                console.error(
+                    'Erro: jogador de ID invalido, por favor arrume a representação do campo'
+                );
             }
 
             const foto = jogador.foto;
-            const icone = document.getElementById(idPos);
+            const icone = document.getElementById(posicaoCampo);
             icone.style.backgroundImage = `url("${foto}")`;
         }
     }
@@ -147,4 +152,7 @@ load();
 1- Ao clicar em qualquer jogador, aparecer overlay e seletor de jogadores DONE
 2- Renderizar os jogadores do botão específico clicado (tipo zagueiro, meio, etc)
 2.1 - Devemos verificar o estado do campo para ver quais ja foram selecionados e esconder o que não foram carregados
+
+TODO: adicionar as imagens no .json, maricota precisa enviar mas eu ja posso ir deixando a estrutura de arquivos pronta
+TODO: Botões de limpar campo e de ver time
 */
