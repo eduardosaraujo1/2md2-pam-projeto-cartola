@@ -21,6 +21,13 @@ body {
     /* padding: 0 2%;  */
     padding-top: 20%;
     padding-bottom: 5%;
+    /* background-image: linear-gradient(to right, rgb(9, 110, 5) , rgb(76, 187, 12)); */
+    background: repeating-linear-gradient(
+        #2e9150,
+        #2e9150 10vh,
+        #31b65f 10vh,
+        #31b65f 20vh
+    );
 }
 
 .campo-parte {
@@ -63,33 +70,13 @@ body {
 }
 
 .jogador {
-    --jogador-tamanho: 2.8rem;
+    --jogador-tamanho: 4rem;
     width: var(--jogador-tamanho);
     height: var(--jogador-tamanho);
-    background-color: black;
-    border: none;
+    background-color: transparent;
+    background-size: contain;
+    border: 2px solid black;
     border-radius: 50%;
-}
-
-/* TEMPORARIO: Colorindo cada jogador*/
-.jogador-atacante {
-    background-color: red;
-}
-
-.jogador-meio {
-    background-color: gold;
-}
-
-.jogador-zagueiro {
-    background-color: blue;
-}
-
-.jogador-lateral {
-    background-color: blueviolet;
-}
-
-.jogador-goleiro {
-    background-color: green;
 }
 
 /* Overlay preto */
@@ -113,7 +100,7 @@ body {
     height: 75vh;
     width: 100%;
     border-radius: 48px 48px 0 0;
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
     transform: translateY(100%);
     transition: all 0.2s ease-in-out;
     overflow-y: scroll;
@@ -123,11 +110,11 @@ body {
     transform: translateY(0%);
 }
 
-.lista-jogadores>.container {
+.lista-jogadores > .container {
     /* TODO: Fazer o grid expandir ou reduzir colunas dependendo do tamanho da tela, imagino que seja com min-max mas pode ser outro método */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(138px, max-content));
-    grid-template-rows:max-content;
+    grid-template-rows: max-content;
     gap: 4px;
     justify-items: center;
     justify-content: center;
@@ -145,7 +132,7 @@ body {
     padding: 0.5rem;
 }
 
-.card-info-jogador>* {
+.card-info-jogador > * {
     width: fit-content;
 }
 
