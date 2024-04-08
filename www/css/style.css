@@ -5,7 +5,7 @@
 }
 
 :root {
-    --cor-primaria: aqua;
+    --cor-primaria: red;
 }
 
 body {
@@ -116,6 +116,7 @@ body {
     background-color: #F0F0F0;
     transform: translateY(100%);
     transition: all 0.2s ease-in-out;
+    overflow-y: scroll;
 }
 
 .lista-jogadores.active {
@@ -125,13 +126,13 @@ body {
 .lista-jogadores>.container {
     /* TODO: Fazer o grid expandir ou reduzir colunas dependendo do tamanho da tela, imagino que seja com min-max mas pode ser outro método */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(138px, max-content));
     grid-template-rows:max-content;
     gap: 4px;
     justify-items: center;
-    height: 100%;
+    justify-content: center;
+    height: fit-content;
     margin: 48px 1em 8px 1em;
-    overflow-y: scroll;
 }
 
 .card-info-jogador {
