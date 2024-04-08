@@ -18,10 +18,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* padding: 0 2%;  */
     padding-top: 20%;
     padding-bottom: 5%;
-    /* background-image: linear-gradient(to right, rgb(9, 110, 5) , rgb(76, 187, 12)); */
     background: repeating-linear-gradient(
         #2e9150,
         #2e9150 10vh,
@@ -111,15 +109,14 @@ body {
 }
 
 .lista-jogadores > .container {
-    /* TODO: Fazer o grid expandir ou reduzir colunas dependendo do tamanho da tela, imagino que seja com min-max mas pode ser outro método */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(138px, max-content));
+    grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
     grid-template-rows: max-content;
-    gap: 4px;
+    gap: 1rem;
     justify-items: center;
     justify-content: center;
     height: fit-content;
-    margin: 48px 1em 8px 1em;
+    margin: 48px 2em 8px 2em;
 }
 
 .card-info-jogador {
@@ -128,15 +125,24 @@ body {
     align-items: center;
     width: 100%;
     height: fit-content;
-    border: 1px solid var(--cor-primaria);
-    padding: 0.5rem;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card-info-jogador > * {
     width: fit-content;
 }
 
+.jogador-foto, .jogador-foto img {
+    width: 100%;
+}
+
 .jogador-foto img {
-    width: 128px;
-    height: 128px;
+    max-height: 128px;
+}
+
+.jogador-nome {
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    font-weight: normal;
 }
