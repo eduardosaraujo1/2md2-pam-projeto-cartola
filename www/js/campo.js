@@ -38,7 +38,8 @@ class Campo {
 }
 
 class MenuHandler {
-    carregarMenu(localCampo) {
+    carregarMenu(localCampoContainer) {
+        const localCampo = localCampoContainer.querySelector('.jogador');
         const jogadoresArea = filtrarJogadorPorArea(localCampo.dataset.posicao);
         const jogadoresDisponiveis = removerJogadoresDuplicados(jogadoresArea);
 
@@ -95,7 +96,7 @@ async function obterDadosJogadores() {
 
 function removerJogadoresDuplicados(jogadoresLocais) {
     return jogadoresLocais.filter(
-        (j) => !Object.values(campo.jogadoresEmCampo).includes(j.id),
+        (j) => !Object.values(campo.jogadoresEmCampo).includes(j.id)
     );
 }
 
@@ -107,7 +108,7 @@ async function load() {
     jogadores = await obterDadosJogadores();
 
     // abrir menu quando clicar em jogador
-    const locaisCampo = document.querySelectorAll('.jogador');
+    const locaisCampo = document.querySelectorAll('.jogador-container');
     for (let localCampo of locaisCampo) {
         localCampo.addEventListener('click', () => {
             menuHandler.carregarMenu(localCampo);
