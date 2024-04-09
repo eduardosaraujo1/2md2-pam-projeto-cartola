@@ -1,101 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <meta
-            http-equiv="Content-Security-Policy"
-            content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'" />
-        <script src="components/loader.js"></script>
-        <link rel="stylesheet" href="components/loader.css" />
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
 
-    <body>
-        <div class="campo">
-            <div class="campo-parte campo-cima">
-                <input
-                    type="button"
-                    data-posicao="atacante"
-                    id="atacante0"
-                    class="jogador jogador-atacante" />
-                <input
-                    type="button"
-                    data-posicao="atacante"
-                    id="atacante1"
-                    class="jogador jogador-atacante" />
-                <input
-                    type="button"
-                    data-posicao="atacante"
-                    id="atacante2"
-                    class="jogador jogador-atacante" />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'" />
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="campo">
+        <div class="campo-parte campo-cima">
+            <input type="button" data-posicao="atacante" id="atacante0" class="jogador" />
+            <input type="button" data-posicao="atacante" id="atacante1" class="jogador" />
+            <input type="button" data-posicao="atacante" id="atacante2" class="jogador" />
+        </div>
+        <div class="campo-parte campo-meio">
+            <div class="linha1">
+                <input type="button" data-posicao="meio" id="meio0" class="jogador" />
             </div>
-            <div class="campo-parte campo-meio">
-                <div class="linha1">
-                    <input
-                        type="button"
-                        data-posicao="meio"
-                        id="meio0"
-                        class="jogador jogador-meio" />
-                </div>
-                <div class="linha2">
-                    <input
-                        type="button"
-                        data-posicao="meio"
-                        id="meio1"
-                        class="jogador jogador-meio" />
-                    <input
-                        type="button"
-                        data-posicao="meio"
-                        id="meio2"
-                        class="jogador jogador-meio" />
-                </div>
-            </div>
-            <div class="campo-parte campo-baixo">
-                <div class="linha1">
-                    <input
-                        type="button"
-                        data-posicao="lateralE"
-                        id="lateralE0"
-                        class="jogador jogador-lateral" />
-                    <input
-                        type="button"
-                        data-posicao="zagueiro"
-                        id="zagueiro0"
-                        class="jogador jogador-zagueiro" />
-                    <input
-                        type="button"
-                        data-posicao="zagueiro"
-                        id="zagueiro1"
-                        class="jogador jogador-zagueiro" />
-                    <input
-                        type="button"
-                        data-posicao="lateralD"
-                        id="lateralD0"
-                        class="jogador jogador-lateral" />
-                </div>
-                <div class="linha2">
-                    <input
-                        type="button"
-                        data-posicao="goleiro"
-                        id="goleiro0"
-                        class="jogador jogador-goleiro" />
-                </div>
+            <div class="linha2">
+                <input type="button" data-posicao="meio" id="meio1" class="jogador" />
+                <input type="button" data-posicao="meio" id="meio2" class="jogador" />
             </div>
         </div>
-        <div class="black-overlay"></div>
-        <div class="lista-jogadores">
-            <div class="container">
-                <!-- Card temporario para servir de base. Cards reais serão gerados via javascript -->
-                <!-- <div class="card-info-jogador estrutura-card">
-                <div class="jogador-foto"><img src="https://fastly.picsum.photos/id/562/512/512.jpg?hmac=lhq9UKzdc2YJ5fQPzIUSrD1eThaFiBAqXbEqebmDjBw" alt="Foto Jogador #1"></div>
-                <h2 class="jogador-nome">Jogador #1</h2>
-            </div> -->
+        <div class="campo-parte campo-baixo">
+            <div class="linha1">
+                <input type="button" data-posicao="lateralE" id="lateralE0" class="jogador" />
+                <input type="button" data-posicao="zagueiro" id="zagueiro0" class="jogador" />
+                <input type="button" data-posicao="zagueiro" id="zagueiro1" class="jogador" />
+                <input type="button" data-posicao="lateralD" id="lateralD0" class="jogador" />
+            </div>
+            <div class="linha2">
+                <input type="button" data-posicao="goleiro" id="goleiro0" class="jogador" />
             </div>
         </div>
+    </div>
+    <div class="black-overlay"></div>
+    <div class="lista-jogadores">
+        <div class="container"> </div>
+    </div>
 
-        <script src="./js/campo.js"></script>
-    </body>
+    <script src="./js/campo.js"></script>
+</body>
+
 </html>
