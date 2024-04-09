@@ -18,14 +18,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 20%;
-    padding-bottom: 5%;
-    background: repeating-linear-gradient(
-        #2e9150,
-        #2e9150 10vh,
-        #31b65f 10vh,
-        #31b65f 20vh
-    );
+    padding: 32px 0;
+    background: repeating-linear-gradient(#2e9150,
+            #2e9150 10vh,
+            #31b65f 10vh,
+            #31b65f 20vh);
 }
 
 .campo-parte {
@@ -40,6 +37,7 @@ body {
     flex-direction: column;
     gap: 5vh;
 }
+
 .campo-parte.campo-meio .linha1 {
     display: flex;
     justify-content: center;
@@ -108,7 +106,7 @@ body {
     transform: translateY(0%);
 }
 
-.lista-jogadores > .container {
+.lista-jogadores>.container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
     grid-template-rows: max-content;
@@ -126,14 +124,17 @@ body {
     width: 100%;
     height: fit-content;
     border-radius: 1px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.card-info-jogador > * {
+.card-info-jogador>* {
     width: fit-content;
 }
 
-.jogador-foto, .jogador-foto img {
+.jogador-foto,
+.jogador-foto img {
     width: 100%;
 }
 

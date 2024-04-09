@@ -16,98 +16,86 @@ class Campo {
         };
     }
 
-    redefinirRenderCampo() {
+    redefinirCampo() {
         const iconesJogadores = document.querySelectorAll('.jogador');
         iconesJogadores.forEach((j) => (j.style.backgroundImage = ''));
     }
 
     renderizarCampo() {
-        // Função que vai colocar foto dos jogadores nas areas do campo que estão preenchidas
-        /* 
-            1- redefinir campo
-            2- para cada goleiro
-        */
-        // this.redefinirRenderCampo();
-        // Para cada posição no campo, procurar um jogador, se for um campo vazio pular.
-        // Se achar um jogador,
-        for (let posicaoCampo in this.jogadoresEmCampo) {
-            const idJogador = this.jogadoresEmCampo[posicaoCampo];
-            if (idJogador === 0) continue;
+        for (let idLocalCampo in this.jogadoresEmCampo) {
+            const idJogador = this.jogadoresEmCampo[idLocalCampo];
             const jogador = jogadores.find((j) => j.id === idJogador);
-            if (jogador == undefined) {
-                console.error(
-                    'Erro: jogador de ID invalido, por favor arrume a representação do campo'
-                );
-            }
+            if (jogador == undefined) continue;
 
-            const foto = jogador.foto;
-            const icone = document.getElementById(posicaoCampo);
-            icone.style.backgroundImage = `url("${foto}")`;
+            const localCampo = document.getElementById(idLocalCampo);
+            localCampo.style.backgroundImage = `url("${jogador.foto}")`;
         }
+    }
+
+    adicionarJogador(jogador, localCampo) {
+        this.jogadoresEmCampo[localCampo.id] = jogador.id;
+    }
+}
+
+class MenuHandler {
+    carregarMenu(localCampo) {
+        const jogadoresArea = filtrarJogadorPorArea(localCampo.dataset.posicao);
+        const jogadoresDisponiveis = removerJogadoresDuplicados(jogadoresArea);
+
+        this.limparMenu();
+        jogadoresDisponiveis.forEach((j) => criarCardJogador(j, localCampo));
+    }
+
+    abrirMenu() {
+        document.querySelector('.lista-jogadores').classList.add('active');
+        document.querySelector('.black-overlay').classList.add('active');
+    }
+
+    fecharMenu() {
+        document.querySelector('.lista-jogadores').classList.remove('active');
+        document.querySelector('.black-overlay').classList.remove('active');
+    }
+
+    limparMenu() {
+        this.obterElementoMenu().innerHTML = '';
+    }
+
+    obterElementoMenu() {
+        return document.querySelector('.lista-jogadores>.container');
     }
 }
 
 let jogadores;
 const campo = new Campo();
+const menuHandler = new MenuHandler();
 
-async function abrirMenuJogadores() {
-    document.querySelector('.lista-jogadores').classList.add('active');
-    document.querySelector('.black-overlay').classList.add('active');
-}
+function criarCardJogador(jogador, localCampo) {
+    const cardEstrutura = `
+        <div class="jogador-foto"><img src="${jogador.foto}" alt="Foto Jogador"></div>
+        <h2 class="jogador-nome">${jogador.nome}</h2>
+    `;
+    const cardContainer = document.querySelector('.lista-jogadores>.container');
+    const card = document.createElement('div');
+    card.classList.add('card-info-jogador');
+    card.innerHTML = cardEstrutura;
 
-function fecharMenuJogadores() {
-    document.querySelector('.lista-jogadores').classList.remove('active');
-    document.querySelector('.black-overlay').classList.remove('active');
-    removerCardJogadores();
+    // ao clicar no card, adicionar jogador escolhido na posição
+    card.addEventListener('click', () => {
+        campo.adicionarJogador(jogador, localCampo);
+        campo.renderizarCampo();
+        menuHandler.fecharMenu();
+    });
+
+    cardContainer.appendChild(card);
 }
 
 async function obterDadosJogadores() {
     return await fetch('js/jogadores.json').then((response) => response.json());
 }
 
-function removerCardJogadores() {
-    const listaJogadores = document.querySelector(
-        '.lista-jogadores>.container'
-    );
-    listaJogadores.innerHTML = '';
-}
-
-function adicionarJogadorCampo(jogador, localizacaoCampo) {
-    /* 
-        1- colocar id do jogador no campo na posição especificada
-        2- renderizar campo, colocando imagem do jogador na posição especificada
-        3- fechar menu
-    */
-    campo.jogadoresEmCampo[localizacaoCampo] = jogador.id;
-    campo.renderizarCampo();
-    fecharMenuJogadores();
-}
-
-function criarCardJogador(jogador, idLocalizacaoCampo) {
-    const elementoJogadorLista = document.querySelector(
-        '.lista-jogadores>.container'
-    );
-    const cardEstrutura = `
-        <div class="jogador-foto"><img src="${jogador.foto}" alt="Foto Jogador"></div>
-        <h2 class="jogador-nome">${jogador.nome}</h2>
-    `;
-
-    const card = document.createElement('div');
-    card.classList.add('card-info-jogador');
-    card.innerHTML = cardEstrutura;
-    elementoJogadorLista.appendChild(card);
-    // card.dataset.localizacaoCampo = idLocalizacaoCampo;
-    // card.dataset.idJogador = jogador.id;
-
-    // ao clicar no card, adicionar jogador escolhido na posição
-    card.addEventListener('click', () => {
-        adicionarJogadorCampo(jogador, idLocalizacaoCampo);
-    });
-}
-
 function removerJogadoresDuplicados(jogadoresLocais) {
     return jogadoresLocais.filter(
-        (j) => !Object.values(campo.jogadoresEmCampo).includes(j.id)
+        (j) => !Object.values(campo.jogadoresEmCampo).includes(j.id),
     );
 }
 
@@ -115,44 +103,32 @@ function filtrarJogadorPorArea(posicaoJogador) {
     return jogadores.filter((j) => j.posicao === posicaoJogador);
 }
 
-async function renderizarMenuJogadores(localNoCampo, posicaoJogador) {
-    /* 
-    1- Ler jogadores
-    2- Verificar posição selecionada
-    3- Remover jogadores duplicados (WIP)
-    3- Renderizar CARDS dependendo da posição selecionada
-    TODO: integrar com o sistema futuro que vai ser de salvar as posições de jogadores ja escolhidos
-     */
-    const jogadoresDaArea = filtrarJogadorPorArea(posicaoJogador);
-    const jogadoresDisponiveis = removerJogadoresDuplicados(jogadoresDaArea);
-
-    removerCardJogadores();
-    jogadoresDisponiveis.forEach((j) => criarCardJogador(j, localNoCampo));
-}
-
 async function load() {
-    'use strict';
     jogadores = await obterDadosJogadores();
+
     // abrir menu quando clicar em jogador
-    const jogadoresIcones = document.querySelectorAll('.jogador');
-    jogadoresIcones.forEach((e) => {
-        e.addEventListener('click', () => {
-            renderizarMenuJogadores(e.id, e.dataset.posicao);
-            abrirMenuJogadores();
+    const locaisCampo = document.querySelectorAll('.jogador');
+    for (let localCampo of locaisCampo) {
+        localCampo.addEventListener('click', () => {
+            menuHandler.carregarMenu(localCampo);
+            menuHandler.abrirMenu();
         });
-    });
+    }
 
     // fechar menu quando clicar em area preta
-    document
-        .querySelector('.black-overlay')
-        .addEventListener('click', fecharMenuJogadores);
+    const blackOverlay = document.querySelector('.black-overlay');
+    blackOverlay.addEventListener('click', () => {
+        menuHandler.fecharMenu();
+        menuHandler.limparMenu();
+    });
 }
 load();
-/* 
-1- Ao clicar em qualquer jogador, aparecer overlay e seletor de jogadores DONE
-2- Renderizar os jogadores do botão específico clicado (tipo zagueiro, meio, etc)
-2.1 - Devemos verificar o estado do campo para ver quais ja foram selecionados e esconder o que não foram carregados
 
-TODO: adicionar as imagens no .json, maricota precisa enviar mas eu ja posso ir deixando a estrutura de arquivos pronta
-TODO: Botões de limpar campo e de ver time
+/* 
+TODO: Botões de limpar campo e de montar time - Eduardo. 
+
+TODO: Adicionar jogadores reais - Saske
+TODO: Adicionar tela inicial - Gian e Enzo
+TODO: Adicionar tela de lista de jogadores - Cristovão(?)
+TODO: Estilização geral do site - Pierri e Eduardo
 */
