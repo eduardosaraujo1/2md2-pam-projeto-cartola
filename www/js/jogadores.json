@@ -1,132 +1,132 @@
 [
     {
-        "nome": "Goleiro1",
+        "nome": "Pearl",
         "posicao": "goleiro",
         "foto": "",
         "id": 1
     },
     {
-        "nome": "Goleiro2",
+        "nome": "Hiashi",
         "posicao": "goleiro",
         "foto": "",
         "id": 2
     },
     {
-        "nome": "Goleiro3",
+        "nome": "Aiko",
         "posicao": "goleiro",
         "foto": "",
         "id": 3
     },
     {
-        "nome": "LateralE1",
+        "nome": "Alan",
         "posicao": "lateralE",
         "foto": "",
         "id": 4
     },
     {
-        "nome": "LateralE2",
+        "nome": "Zang",
         "posicao": "lateralE",
         "foto": "",
         "id": 5
     },
     {
-        "nome": "LateralD1",
+        "nome": "Hope",
         "posicao": "lateralD",
         "foto": "",
         "id": 6
     },
     {
-        "nome": "LateralD2",
+        "nome": "Chopper",
         "posicao": "lateralD",
         "foto": "",
         "id": 7
     },
     {
-        "nome": "Zagueiro1",
+        "nome": "Lala",
         "posicao": "zagueiro",
         "foto": "",
         "id": 8
     },
     {
-        "nome": "Zagueiro2",
+        "nome": "Luke Ariel",
         "posicao": "zagueiro",
         "foto": "",
         "id": 9
     },
     {
-        "nome": "Zagueiro3",
+        "nome": "Morzia",
         "posicao": "zagueiro",
         "foto": "",
         "id": 10
     },
     {
-        "nome": "Zagueiro4",
+        "nome": "Summer",
         "posicao": "zagueiro",
         "foto": "",
         "id": 11
     },
     {
-        "nome": "Zagueiro5",
+        "nome": "Yon Dino",
         "posicao": "zagueiro",
         "foto": "",
         "id": 12
     },
     {
-        "nome": "Meio1",
+        "nome": "Darius",
         "posicao": "meio",
         "foto": "",
         "id": 13
     },
     {
-        "nome": "Meio2",
+        "nome": "Ash",
         "posicao": "meio",
         "foto": "",
         "id": 14
     },
     {
-        "nome": "Meio3",
+        "nome": "Terry",
         "posicao": "meio",
         "foto": "",
         "id": 15
     },
     {
-        "nome": "Meio4",
+        "nome": "Taiyo",
         "posicao": "meio",
         "foto": "",
         "id": 16
     },
     {
-        "nome": "Meio5",
+        "nome": "Agares",
         "posicao": "meio",
         "foto": "",
         "id": 17
     },
     {
-        "nome": "Atacante1",
+        "nome": "Saint",
         "posicao": "atacante",
         "foto": "https://fastly.picsum.photos/id/670/256/256.jpg?hmac=AQcI9oMre6RoI8M6yfTUTszGL71Bc1UPU68uO-KOjCk",
         "id": 18
     },
     {
-        "nome": "Atacante2",
+        "nome": "Lucien",
         "posicao": "atacante",
         "foto": "https://fastly.picsum.photos/id/718/256/256.jpg?hmac=EZV6ytPGtGqkQ4KJpJvzTwjvlij_bFQAVqE1C03fPGY",
         "id": 19
     },
     {
-        "nome": "Atacante3",
+        "nome": "Toco preto de madeira",
         "posicao": "atacante",
         "foto": "",
         "id": 20
     },
     {
-        "nome": "Atacante4",
+        "nome": "Capivara",
         "posicao": "atacante",
         "foto": "",
         "id": 21
     },
     {
-        "nome": "Atacante5",
+        "nome": "Bolsonaro",
         "posicao": "atacante",
         "foto": "",
         "id": 22
