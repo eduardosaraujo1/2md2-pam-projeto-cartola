@@ -6,7 +6,7 @@
         "id": 1
     },
     {
-        "nome": "Lucien",
+        "nome": "Chopper",
         "posicao": "atacante",
         "foto": "https://fastly.picsum.photos/id/718/256/256.jpg?hmac=EZV6ytPGtGqkQ4KJpJvzTwjvlij_bFQAVqE1C03fPGY",
         "id": 2
@@ -108,7 +108,7 @@
         "id": 18
     },
     {
-        "nome": "Chopper",
+        "nome": "Nicolas Paulo",
         "posicao": "lateralD",
         "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
         "id": 19
