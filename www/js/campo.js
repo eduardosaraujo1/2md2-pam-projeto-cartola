@@ -66,7 +66,7 @@ class MenuHandler {
     }
 
     obterElementoMenu() {
-        return document.querySelector('.lista-jogadores>.container');
+        return document.querySelector('.lista-jogadores .card-container');
     }
 }
 
@@ -79,7 +79,7 @@ function criarCardJogador(jogador, localCampo) {
         <div class="jogador-foto"><img src="${jogador.foto}" alt="Foto Jogador"></div>
         <h2 class="jogador-nome">${jogador.nome}</h2>
     `;
-    const cardContainer = document.querySelector('.lista-jogadores>.container');
+    const cardContainer = menuHandler.obterElementoMenu();
     const card = document.createElement('div');
     card.classList.add('card-info-jogador');
     card.innerHTML = cardEstrutura;
@@ -131,6 +131,8 @@ load();
 
 /* 
 TODO: Botões de limpar campo e de montar time - Eduardo. 
+TODO: Implementar pagina inicial
+TODO: Fazer jogador selecionado mostrar nome no lugar da abreviação (ATA, ZAG, etc.) Referência ao minuto 15:46 do video: https://www.youtube.com/watch?v=5h3WFpUxbtw
 
 TODO: Adicionar jogadores reais - Saske
 TODO: Adicionar tela inicial - Gian e Enzo

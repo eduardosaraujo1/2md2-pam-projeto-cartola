@@ -7,8 +7,8 @@
 :root {
     --cor-primaria: hsl(258, 67%, 46%);
     --cor-secundaria: hsl(30.19, 67.93%, 46.47%);
-    --campo-cor-primaria: hsl(120.47, 100%, 25.1%);
-    --campo-cor-secundaria: hsl(120.47, 100%, 26.1%);
+    /* --campo-cor-primaria: hsl(120.47, 100%, 25.1%);
+    --campo-cor-secundaria: hsl(120.47, 100%, 26.1%); */
 
     font-family: sans-serif;
 }
@@ -68,7 +68,6 @@ body {
     --jogador-tamanho: 3rem;
     width: var(--jogador-tamanho);
     height: var(--jogador-tamanho);
-    /* box-shadow: 0 4px 10px 0 rgba(0, 0, 2, 0.2), 0 6px 20px 0 rgba(0, 0, 2, 0.2); */
     box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
     background-color: hsl(149, 87%, 44%);
     background-size: contain;
@@ -104,30 +103,39 @@ body {
 
 /* Lista de Jogadores */
 .lista-jogadores {
+    display: flex;
     position: absolute;
-    bottom: 0;
-    height: 75vh;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     width: 100%;
+    height: 75vh;
     border-radius: 48px 48px 0 0;
-    background-color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 30%);
     transform: translateY(100%);
     transition: all 0.2s ease-in-out;
-    overflow-y: scroll;
+    padding: 48px 2em 8px 2em;
+    bottom: 0;
 }
 
 .lista-jogadores.active {
     transform: translateY(0%);
 }
 
-.lista-jogadores > .container {
+.lista-jogadores .container {
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.lista-jogadores .card-container {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
     grid-template-rows: max-content;
     gap: 1rem;
     justify-items: center;
     justify-content: center;
     height: fit-content;
-    margin: 48px 2em 8px 2em;
 }
 
 .card-info-jogador {
@@ -136,9 +144,10 @@ body {
     align-items: center;
     width: 100%;
     height: fit-content;
-    border-radius: 1px;
+    border-radius: 8px;
     background-color: hsl(0, 0%, 90%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
 }
 
 .card-info-jogador > * {
@@ -155,6 +164,21 @@ body {
 }
 
 .jogador-nome {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: normal;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 4px 8px;
+}
+
+.lista-jogadores-header {
+    font-size: 2em;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 4px;
+    padding: 0 4px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
 }
