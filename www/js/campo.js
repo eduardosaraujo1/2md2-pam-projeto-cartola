@@ -18,7 +18,10 @@ class Campo {
 
     redefinirCampo() {
         const iconesJogadores = document.querySelectorAll('.jogador');
-        iconesJogadores.forEach((j) => (j.style.backgroundImage = ''));
+        iconesJogadores.forEach((j) => {
+            j.style.backgroundImage = '';
+            j.value = '+';
+        });
     }
 
     renderizarCampo() {
@@ -29,6 +32,7 @@ class Campo {
 
             const localCampo = document.getElementById(idLocalCampo);
             localCampo.style.backgroundImage = `url("${jogador.foto}")`;
+            localCampo.value = '';
         }
     }
 

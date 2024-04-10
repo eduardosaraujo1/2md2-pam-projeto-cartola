@@ -5,7 +5,11 @@
 }
 
 :root {
-    --cor-primaria: red;
+    --cor-primaria: hsl(258, 67%, 46%);
+    --cor-secundaria: hsl(30.19, 67.93%, 46.47%);
+    --campo-cor-primaria: hsl(120.47, 100%, 25.1%);
+    --campo-cor-secundaria: hsl(120.47, 100%, 26.1%);
+
     font-family: sans-serif;
 }
 
@@ -15,79 +19,71 @@ body {
 }
 
 .campo {
+    width: 100%;
     height: 100vh;
+    padding: 32px 24px;
+    background-image: url(/www/assets/campo-background.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.campo .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 32px 0;
-    background: repeating-linear-gradient(
-        #2e9150,
-        #2e9150 10vh,
-        #31b65f 10vh,
-        #31b65f 20vh
-    );
+    height: 100%;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
 }
 
 .campo-parte {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-
-/* Campo do Meio */
-.campo-parte.campo-meio {
-    display: flex;
-    flex-direction: column;
-    gap: 5vh;
-}
-
-.campo-parte.campo-meio .linha1 {
-    display: flex;
-    justify-content: center;
-}
-
-.campo-parte.campo-meio .linha2 {
-    display: flex;
-    justify-content: space-around;
+    align-items: end;
 }
 
 /* Campo de Baixo */
 .campo-parte.campo-baixo {
-    flex-direction: column;
-    gap: 15vh;
+    gap: 10vw;
 }
 
-.campo-parte.campo-baixo .linha1 {
+.campo-baixo > * {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: end;
+    flex: 1;
 }
 
-.campo-parte.campo-baixo .linha2 {
-    display: flex;
-    justify-content: center;
-}
-
+/* Jogadores */
 .jogador-container {
     display: flex;
     flex-direction: column;
-    gap: 4px;
     align-items: center;
+    gap: 4px;
 }
 
 .jogador-container .jogador {
-    --jogador-tamanho: 4rem;
+    --jogador-tamanho: 3rem;
     width: var(--jogador-tamanho);
     height: var(--jogador-tamanho);
-    background-color: transparent;
+    /* box-shadow: 0 4px 10px 0 rgba(0, 0, 2, 0.2), 0 6px 20px 0 rgba(0, 0, 2, 0.2); */
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+    background-color: hsl(149, 87%, 44%);
     background-size: contain;
     border: 2px solid black;
     border-radius: 50%;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: white;
 }
 
 .jogador-container .jogador-label {
     font-size: 1.5em;
     font-weight: bold;
+    background-color: #62bb47;
+    text-shadow: 4px 2px rgba(0, 0, 0, 0.1);
     color: white;
     text-transform: uppercase;
 }
@@ -113,7 +109,7 @@ body {
     height: 75vh;
     width: 100%;
     border-radius: 48px 48px 0 0;
-    background-color: #f0f0f0;
+    background-color: hsl(0, 0%, 98%);
     transform: translateY(100%);
     transition: all 0.2s ease-in-out;
     overflow-y: scroll;
@@ -141,6 +137,7 @@ body {
     width: 100%;
     height: fit-content;
     border-radius: 1px;
+    background-color: hsl(0, 0%, 90%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 

@@ -17,114 +17,132 @@
 
     <body>
         <div class="campo">
-            <div class="campo-parte campo-cima">
-                <div class="jogador-container">
-                    <input
-                        type="button"
-                        data-posicao="atacante"
-                        id="atacante0"
-                        class="jogador"
-                    />
-                    <span class="jogador-label">ATA</span>
-                </div>
-                <div class="jogador-container">
-                    <input
-                        type="button"
-                        data-posicao="atacante"
-                        id="atacante1"
-                        class="jogador"
-                    />
-                    <span class="jogador-label">ATA</span>
-                </div>
-                <div class="jogador-container">
-                    <input
-                        type="button"
-                        data-posicao="atacante"
-                        id="atacante2"
-                        class="jogador"
-                    />
-                    <span class="jogador-label">ATA</span>
-                </div>
-            </div>
-            <div class="campo-parte campo-meio">
-                <div class="linha1">
+            <div class="container">
+                <div class="campo-parte campo-cima">
                     <div class="jogador-container">
                         <input
+                            id="atacante0"
+                            class="jogador"
                             type="button"
-                            data-posicao="meio"
+                            value="+"
+                            data-posicao="atacante"
+                        />
+                        <span class="jogador-label">ATA</span>
+                    </div>
+                    <div class="jogador-container" style="padding-bottom: 2vh">
+                        <input
+                            id="atacante1"
+                            class="jogador"
+                            type="button"
+                            value="+"
+                            data-posicao="atacante"
+                        />
+                        <span class="jogador-label">ATA</span>
+                    </div>
+                    <div class="jogador-container">
+                        <input
+                            id="atacante2"
+                            class="jogador"
+                            type="button"
+                            value="+"
+                            data-posicao="atacante"
+                        />
+                        <span class="jogador-label">ATA</span>
+                    </div>
+                </div>
+                <div class="campo-parte campo-meio">
+                    <div class="jogador-container">
+                        <input
                             id="meio0"
                             class="jogador"
+                            type="button"
+                            value="+"
+                            data-posicao="meio"
                         />
                         <span class="jogador-label">MEI</span>
                     </div>
-                </div>
-                <div class="linha2">
-                    <div class="jogador-container">
+                    <div class="jogador-container" style="padding-bottom: 4vh">
                         <input
-                            type="button"
-                            data-posicao="meio"
                             id="meio1"
                             class="jogador"
+                            type="button"
+                            value="+"
+                            data-posicao="meio"
                         />
                         <span class="jogador-label">MEI</span>
                     </div>
                     <div class="jogador-container">
                         <input
-                            type="button"
-                            data-posicao="meio"
                             id="meio2"
                             class="jogador"
+                            type="button"
+                            value="+"
+                            data-posicao="meio"
                         />
                         <span class="jogador-label">MEI</span>
                     </div>
                 </div>
-            </div>
-            <div class="campo-parte campo-baixo">
-                <div class="linha1">
-                    <div class="jogador-container">
-                        <input
-                            type="button"
-                            data-posicao="lateralE"
-                            id="lateralE0"
-                            class="jogador"
-                        />
-                        <span class="jogador-label">LE</span>
+
+                <div class="campo-parte campo-baixo">
+                    <div class="campo-esquerda">
+                        <div class="jogador-container">
+                            <input
+                                id="lateralE0"
+                                class="jogador"
+                                type="button"
+                                value="+"
+                                data-posicao="lateralE"
+                            />
+                            <span class="jogador-label">LAT</span>
+                        </div>
+                        <div
+                            class="jogador-container"
+                            style="padding-bottom: 2vh"
+                        >
+                            <input
+                                id="zagueiro0"
+                                class="jogador"
+                                type="button"
+                                value="+"
+                                data-posicao="zagueiro"
+                            />
+                            <span class="jogador-label">ZAG</span>
+                        </div>
                     </div>
-                    <div class="jogador-container">
-                        <input
-                            type="button"
-                            data-posicao="zagueiro"
-                            id="zagueiro0"
-                            class="jogador"
-                        />
-                        <span class="jogador-label">ZAG</span>
-                    </div>
-                    <div class="jogador-container">
-                        <input
-                            type="button"
-                            data-posicao="zagueiro"
-                            id="zagueiro1"
-                            class="jogador"
-                        />
-                        <span class="jogador-label">ZAG</span>
-                    </div>
-                    <div class="jogador-container">
-                        <input
-                            type="button"
-                            data-posicao="lateralD"
-                            id="lateralD0"
-                            class="jogador"
-                        />
-                        <span class="jogador-label">LD</span>
+                    <div class="campo-direita">
+                        <div
+                            class="jogador-container"
+                            style="padding-bottom: 2vh"
+                        >
+                            <input
+                                id="zagueiro1"
+                                class="jogador"
+                                type="button"
+                                value="+"
+                                data-posicao="zagueiro"
+                            />
+                            <span class="jogador-label">ZAG</span>
+                        </div>
+                        <div class="jogador-container">
+                            <input
+                                id="lateralD0"
+                                class="jogador"
+                                type="button"
+                                value="+"
+                                data-posicao="lateralD"
+                            />
+                            <span class="jogador-label">LAT</span>
+                        </div>
                     </div>
                 </div>
-                <div class="linha2">
+                <div class="campo-parte campo-gol">
                     <div class="jogador-container">
                         <input
-                            type="button"
-                            data-posicao="goleiro"
                             id="goleiro0"
                             class="jogador"
+                            type="button"
+                            value="+"
+                            data-posicao="goleiro"
                         />
                         <span class="jogador-label">GOL</span>
                     </div>
