@@ -68,6 +68,13 @@ class Campo {
     adicionarJogador(jogador, localCampo) {
         this.jogadoresEmCampo[localCampo.id] = jogador.id;
     }
+
+    exportarCampo() {
+        sessionStorage.setItem(
+            'situacaoCampo',
+            JSON.stringify(campo.jogadoresEmCampo)
+        );
+    }
 }
 
 class MenuHandler {
@@ -162,11 +169,15 @@ async function load() {
     btnReset.addEventListener('click', () => {
         campo.redefinirCampo();
     });
+
+    btnMontarTime.addEventListener('click', () => {
+        campo.exportarCampo();
+        location.href = 'timeMontado.html';
+    });
 }
 load();
 
 /* 
-TODO: Botões de limpar campo e de montar time - Eduardo. 
 TODO: Interface para enviar status do campo para timemontado.html
 
 TODO: Adicionar jogadores reais - Saske

@@ -8,6 +8,8 @@
 :root {
     font-family: sans-serif;
     --black-bg: #181a1b;
+    --color-black: #181a1b;
+    --color-white: hsl(0, 0%, 90%);
 }
 
 body {
@@ -118,7 +120,7 @@ body {
     height: 75vh;
     z-index: 4;
     border-radius: 48px 48px 0 0;
-    background-color: var(--black-bg);
+    background-color: var(--color-black);
     transform: translateY(100%);
     transition: all 0.2s ease-in-out;
     padding: 48px 2em 8px 2em;
@@ -147,7 +149,7 @@ body {
 
 .lista-jogadores-header {
     font-size: 2em;
-    background-color: hsl(0, 0%, 90%);
+    background-color: var(--color-white);
     border-radius: 4px;
     padding: 0 4px;
     width: 100%;
@@ -193,7 +195,7 @@ body {
 /* Navegação Botões */
 .nav-botoes {
     height: 5vh;
-    background-color: var(--black-bg);
+    background-color: var(--color-black);
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -208,14 +210,13 @@ body {
     padding: 0.25rem 0.125rem;
     background: none;
     border: none;
-    color: hsl(0, 0%, 90%);
+    color: var(--color-white);
 }
 
 /* Logo */
 .logo-cartola {
-    /* height: 100%; */
     margin-right: auto;
-    color: hsl(0, 0%, 90%);
+    color: var(--color-white);
     font-weight: bold;
     font-size: 1.2rem;
     z-index: 4;
