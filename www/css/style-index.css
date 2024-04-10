@@ -1,40 +1,42 @@
-* {
-    font-family: sans-serif;
-}
-.titulo1 {
-    margin: 0;
-    font-size: 80px;
-    text-align: center;
-    text-shadow: 3px 3px #000000;
-    color: chocolate;
-}
-
-.titulo2 {
-    margin: 0;
-    font-family: sans-serif;
-    text-align: center;
-    color: greenyellow;
-    font-size: 80px;
-    text-shadow: 3px 3px #000000;
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* margin: 90px auto; */
 }
 
-.botao1 {
-    font-size: 40px;
-    color: gold;
-    text-align: center;
-    background-color: darkgreen;
-}
-
-.botao2 {
-    font-size: 40px;
-    text-align: center;
-    background-color: gold;
-    color: darkgreen;
-}
-
-.botoes {
+.card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 8px;
+    background-color: white;
+    height: 450px;
+    width: 650px;
+    border-radius: 3%;
+    border-color: black;
+    border-style: inset;
+    margin-bottom: 15vh;
+}
+
+.img,
+.img img {
+    width: 100%;
+}
+
+.button {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+#butao {
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border: solid 2px black;
+    border-radius: 20px;
+    color: white;
+    background-color: green;
 }

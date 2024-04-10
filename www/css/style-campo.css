@@ -5,11 +5,6 @@
 }
 
 :root {
-    --cor-primaria: hsl(258, 67%, 46%);
-    --cor-secundaria: hsl(30.19, 67.93%, 46.47%);
-    /* --campo-cor-primaria: hsl(120.47, 100%, 25.1%);
-    --campo-cor-secundaria: hsl(120.47, 100%, 26.1%); */
-
     font-family: sans-serif;
 }
 

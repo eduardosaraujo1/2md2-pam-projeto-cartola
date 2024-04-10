@@ -159,7 +159,7 @@ load();
 
 /* 
 TODO: Botões de limpar campo e de montar time - Eduardo. 
-TODO: Implementar pagina inicial (falta estilização do enzo)
+TODO: Interface para enviar status do campo para timemontado.html
 
 TODO: Adicionar jogadores reais - Saske
 TODO: Adicionar tela de lista de jogadores - Cristovão
