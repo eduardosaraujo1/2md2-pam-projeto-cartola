@@ -45,7 +45,7 @@ body {
 
 /* Campo de Baixo */
 .campo-parte.campo-baixo {
-    gap: 10vw;
+    gap: 5vw;
 }
 
 .campo-baixo > * {
@@ -79,12 +79,16 @@ body {
 }
 
 .jogador-container .jogador-label {
-    font-size: 1.5em;
-    font-weight: bold;
-    background-color: #62bb47;
-    text-shadow: 4px 2px rgba(0, 0, 0, 0.1);
+    width: 90px;
     color: white;
-    text-transform: uppercase;
+    padding: 0 4px;
+    background-color: hsl(113.33, 31.47%, 38.04%);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
 }
 
 /* Overlay preto */

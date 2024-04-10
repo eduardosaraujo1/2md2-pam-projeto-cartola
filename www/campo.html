@@ -12,24 +12,29 @@
         />
         <script src="components/loader.js"></script>
         <link rel="stylesheet" href="components/loader.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-campo.css" />
     </head>
 
     <body>
         <div class="campo">
             <div class="container">
                 <div class="campo-parte campo-cima">
-                    <div class="jogador-container">
-                        <input
-                            id="atacante0"
-                            class="jogador"
-                            type="button"
-                            value="+"
-                            data-posicao="atacante"
-                        />
-                        <span class="jogador-label">ATA</span>
+                    <div
+                        class="jogador-container"
+                        id="atacante0"
+                        data-posicao="atacante"
+                    >
+                        <input class="jogador" type="button" value="+" />
+                        <span class="jogador-label" data-default="ATA"
+                            >ATA</span
+                        >
                     </div>
-                    <div class="jogador-container" style="padding-bottom: 2vh">
+                    <div
+                        class="jogador-container"
+                        style="padding-bottom: 2vh"
+                        id="atacante1"
+                        data-posicao="atacante"
+                    >
                         <input
                             id="atacante1"
                             class="jogador"
@@ -37,113 +42,112 @@
                             value="+"
                             data-posicao="atacante"
                         />
-                        <span class="jogador-label">ATA</span>
+                        <span data-default="ATA" class="jogador-label"
+                            >ATA</span
+                        >
                     </div>
-                    <div class="jogador-container">
-                        <input
-                            id="atacante2"
-                            class="jogador"
-                            type="button"
-                            value="+"
-                            data-posicao="atacante"
-                        />
-                        <span class="jogador-label">ATA</span>
+                    <div
+                        class="jogador-container"
+                        id="atacante2"
+                        data-posicao="atacante"
+                    >
+                        <input class="jogador" type="button" value="+" />
+                        <span data-default="ATA" class="jogador-label"
+                            >ATA</span
+                        >
                     </div>
                 </div>
                 <div class="campo-parte campo-meio">
-                    <div class="jogador-container">
-                        <input
-                            id="meio0"
-                            class="jogador"
-                            type="button"
-                            value="+"
-                            data-posicao="meio"
-                        />
-                        <span class="jogador-label">MEI</span>
+                    <div
+                        class="jogador-container"
+                        id="meio0"
+                        data-posicao="meio"
+                    >
+                        <input class="jogador" type="button" value="+" />
+                        <span data-default="MEI" class="jogador-label"
+                            >MEI</span
+                        >
                     </div>
-                    <div class="jogador-container" style="padding-bottom: 4vh">
-                        <input
-                            id="meio1"
-                            class="jogador"
-                            type="button"
-                            value="+"
-                            data-posicao="meio"
-                        />
-                        <span class="jogador-label">MEI</span>
+                    <div
+                        class="jogador-container"
+                        style="padding-bottom: 4vh"
+                        id="meio1"
+                        data-posicao="meio"
+                    >
+                        <input class="jogador" type="button" value="+" />
+                        <span data-default="MEI" class="jogador-label"
+                            >MEI</span
+                        >
                     </div>
-                    <div class="jogador-container">
-                        <input
-                            id="meio2"
-                            class="jogador"
-                            type="button"
-                            value="+"
-                            data-posicao="meio"
-                        />
-                        <span class="jogador-label">MEI</span>
+                    <div
+                        class="jogador-container"
+                        id="meio2"
+                        data-posicao="meio"
+                    >
+                        <input class="jogador" type="button" value="+" />
+                        <span data-default="MEI" class="jogador-label"
+                            >MEI</span
+                        >
                     </div>
                 </div>
                 <div class="campo-parte campo-baixo">
                     <div class="campo-esquerda">
-                        <div class="jogador-container">
-                            <input
-                                id="lateralE0"
-                                class="jogador"
-                                type="button"
-                                value="+"
-                                data-posicao="lateralE"
-                            />
-                            <span class="jogador-label">LAT</span>
-                        </div>
                         <div
                             class="jogador-container"
-                            style="padding-bottom: 2vh"
+                            id="lateralE0"
+                            data-posicao="lateralE"
                         >
-                            <input
-                                id="zagueiro0"
-                                class="jogador"
-                                type="button"
-                                value="+"
-                                data-posicao="zagueiro"
-                            />
-                            <span class="jogador-label">ZAG</span>
+                            <input class="jogador" type="button" value="+" />
+                            <span data-default="LAT" class="jogador-label"
+                                >LAT</span
+                            >
+                        </div>
+                        <div
+                            id="zagueiro0"
+                            class="jogador-container"
+                            style="padding-bottom: 2vh"
+                            data-posicao="zagueiro"
+                        >
+                            <input class="jogador" type="button" value="+" />
+                            <span data-default="ZAG" class="jogador-label"
+                                >ZAG</span
+                            >
                         </div>
                     </div>
                     <div class="campo-direita">
                         <div
+                            id="zagueiro1"
                             class="jogador-container"
                             style="padding-bottom: 2vh"
+                            data-posicao="zagueiro"
                         >
-                            <input
-                                id="zagueiro1"
-                                class="jogador"
-                                type="button"
-                                value="+"
-                                data-posicao="zagueiro"
-                            />
-                            <span class="jogador-label">ZAG</span>
+                            <input class="jogador" type="button" value="+" />
+                            <span data-default="ZAG" class="jogador-label"
+                                >ZAG</span
+                            >
                         </div>
-                        <div class="jogador-container">
-                            <input
-                                id="lateralD0"
-                                class="jogador"
-                                type="button"
-                                value="+"
-                                data-posicao="lateralD"
-                            />
-                            <span class="jogador-label">LAT</span>
+                        <div
+                            class="jogador-container"
+                            id="lateralD0"
+                            data-posicao="lateralD"
+                        >
+                            <input class="jogador" type="button" value="+" />
+                            <span data-default="LAT" class="jogador-label"
+                                >LAT</span
+                            >
                         </div>
                     </div>
                 </div>
                 <div class="campo-parte campo-gol">
-                    <div class="jogador-container">
-                        <input
-                            id="goleiro0"
-                            class="jogador"
-                            type="button"
-                            value="+"
-                            data-posicao="goleiro"
-                        />
-                        <span class="jogador-label">GOL</span>
+                    <div
+                        class="jogador-container"
+                        id="goleiro0"
+                        data-posicao="goleiro"
+                    >
+                        <input class="jogador" type="button" value="+" />
+                        <span data-default="GOL" class="jogador-label"
+                            >GOL</span
+                        >
                     </div>
                 </div>
             </div>

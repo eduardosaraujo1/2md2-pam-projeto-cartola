@@ -16,12 +16,33 @@ class Campo {
         };
     }
 
-    redefinirCampo() {
-        const iconesJogadores = document.querySelectorAll('.jogador');
-        iconesJogadores.forEach((j) => {
-            j.style.backgroundImage = '';
-            j.value = '+';
+    redefinirCampoRender() {
+        const locaisCampo = document.querySelectorAll('.jogador-container');
+        locaisCampo.forEach((localCampo) => {
+            const icone = localCampo.querySelector('.jogador');
+            const label = localCampo.querySelector('.jogador-label');
+            icone.style.backgroundImage = '';
+            icone.value = '+';
+            label.innerHTML = label.dataset.default;
         });
+    }
+
+    redefinirCampo() {
+        this.jogadoresEmCampo = {
+            atacante0: 0,
+            atacante1: 0,
+            atacante2: 0,
+            meio0: 0,
+            meio1: 0,
+            meio2: 0,
+            zagueiro0: 0,
+            zagueiro1: 0,
+            lateralE0: 0,
+            lateralD0: 0,
+            goleiro0: 0,
+        };
+
+        this.redefinirCampoRender();
     }
 
     renderizarCampo() {
@@ -31,9 +52,17 @@ class Campo {
             if (jogador == undefined) continue;
 
             const localCampo = document.getElementById(idLocalCampo);
-            localCampo.style.backgroundImage = `url("${jogador.foto}")`;
-            localCampo.value = '';
+            this.renderizarJogador(jogador, localCampo);
         }
+    }
+
+    renderizarJogador(jogador, localCampo) {
+        const localCampoIcone = localCampo.querySelector('.jogador');
+        localCampoIcone.style.backgroundImage = `url("${jogador.foto}")`;
+        localCampoIcone.value = '';
+
+        const label = localCampo.querySelector('.jogador-label');
+        label.innerHTML = jogador.nome;
     }
 
     adicionarJogador(jogador, localCampo) {
@@ -42,8 +71,7 @@ class Campo {
 }
 
 class MenuHandler {
-    carregarMenu(localCampoContainer) {
-        const localCampo = localCampoContainer.querySelector('.jogador');
+    carregarMenu(localCampo) {
         const jogadoresArea = filtrarJogadorPorArea(localCampo.dataset.posicao);
         const jogadoresDisponiveis = removerJogadoresDuplicados(jogadoresArea);
 
@@ -131,11 +159,8 @@ load();
 
 /* 
 TODO: Botões de limpar campo e de montar time - Eduardo. 
-TODO: Implementar pagina inicial
-TODO: Fazer jogador selecionado mostrar nome no lugar da abreviação (ATA, ZAG, etc.) Referência ao minuto 15:46 do video: https://www.youtube.com/watch?v=5h3WFpUxbtw
+TODO: Implementar pagina inicial (falta estilização do enzo)
 
 TODO: Adicionar jogadores reais - Saske
-TODO: Adicionar tela inicial - Gian e Enzo
-TODO: Adicionar tela de lista de jogadores - Cristovão(?)
-TODO: Estilização geral do site - Pierri e Eduardo
+TODO: Adicionar tela de lista de jogadores - Cristovão
 */
