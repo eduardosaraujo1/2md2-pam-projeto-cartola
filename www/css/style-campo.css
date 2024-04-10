@@ -16,14 +16,17 @@
 body {
     overflow: hidden;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Campo */
 .campo {
     width: 100%;
-    height: 100vh;
+    flex: 1;
     padding: 32px 24px;
     background-image: url(/www/assets/campo-background.jpg);
-    background-size: 100vw 100vh;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -142,6 +145,16 @@ body {
     height: fit-content;
 }
 
+.lista-jogadores-header {
+    font-size: 2em;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 4px;
+    padding: 0 4px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+}
+
 .card-info-jogador {
     display: flex;
     flex-direction: column;
@@ -177,12 +190,11 @@ body {
     padding: 4px 8px;
 }
 
-.lista-jogadores-header {
-    font-size: 2em;
-    background-color: hsl(0, 0%, 90%);
-    border-radius: 4px;
-    padding: 0 4px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+/* Navegação Botões */
+.nav-botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 8vh;
+    background-color: black;
 }
