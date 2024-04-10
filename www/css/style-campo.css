@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 :root {
@@ -24,6 +25,7 @@ body {
     background-image: url(/www/assets/campo-background.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 
 .campo .container {
@@ -98,6 +100,7 @@ body {
     width: 100%;
     height: 100vh;
     opacity: 0.2;
+    z-index: 3;
 }
 
 .black-overlay.active {
@@ -113,6 +116,7 @@ body {
     gap: 12px;
     width: 100%;
     height: 75vh;
+    z-index: 4;
     border-radius: 48px 48px 0 0;
     background-color: var(--black-bg);
     transform: translateY(100%);
@@ -196,7 +200,7 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 0 1rem;
-    z-index: 12;
+    z-index: 2;
 }
 
 .nav-botoes .btn {
@@ -211,11 +215,8 @@ body {
 .logo-cartola {
     /* height: 100%; */
     margin-right: auto;
-    color: white;
+    color: hsl(0, 0%, 90%);
     font-weight: bold;
     font-size: 1.2rem;
+    z-index: 4;
 }
-
-/* .logo-cartola img {
-    height: 100%;
-} */

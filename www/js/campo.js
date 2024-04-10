@@ -42,7 +42,7 @@ class Campo {
             goleiro0: 0,
         };
 
-        campo.redefinirCampoRender();
+        this.redefinirCampoRender();
     }
 
     renderizarCampo() {
@@ -159,7 +159,9 @@ async function load() {
     const btnReset = document.querySelector('#btn-reset');
     const btnMontarTime = document.querySelector('#btn-montar-time');
 
-    btnReset.addEventListener('click', campo.redefinirCampo);
+    btnReset.addEventListener('click', () => {
+        campo.redefinirCampo();
+    });
 }
 load();
 
