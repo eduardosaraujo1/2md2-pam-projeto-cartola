@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta charset="utf-8" />
         <meta
             name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
         <meta
             http-equiv="Content-Security-Policy"
-            content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'" />
+            content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'"
+        />
         <script src="components/loader.js"></script>
         <link rel="stylesheet" href="components/loader.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-index.css" />
         <script></script>
     </head>
-
     <body>
-        <!-- Tela Inicial -->
-        <a href="./selecao.html">Go to Campo</a>
+        <p class="titulo1">Cartola</p>
+        <p class="titulo2">F.B.F</p>
+        <hr size="10" color="black" width="410px" />
+        <br />
+        <div class="botoes">
+            <input
+                onclick="location.href = 'campo.html'"
+                type="submit"
+                value="Iniciar Jogo"
+                class="botao1"
+            />
+            <input type="submit" value="Sobre O Jogo" class="botao2" />
+        </div>
     </body>
 </html>
