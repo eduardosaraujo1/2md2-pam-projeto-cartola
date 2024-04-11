@@ -197,11 +197,13 @@ async function load() {
     // botões
     const btnReset = document.querySelector('#btn-reset');
     const btnMontarTime = document.querySelector('#btn-montar-time');
+    const logoCartola = document.querySelector('.logo-cartola');
 
     btnReset.addEventListener('click', () => {
         campo.redefinirCampo();
     });
     btnMontarTime.addEventListener('click', visualizarEscalamento);
+    logoCartola.addEventListener('click', () => (location.href = 'index.html'));
 }
 load();
 
