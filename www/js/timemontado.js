@@ -111,13 +111,3 @@ async function load() {
 }
 
 load();
-
-// TODO: NÃO ESQUECA QUE QUANDO VOLTAR O TIME DEVE SER RESTAURADO AO SEU MODO COMO ESTAVA ANTES
-
-/* 
-1- Fetch field position from session storage V
-2- Fetch player data. V
-3- Filter the field for non empty positions V
-4- Using the field positions, create an array of players, and sort that array on ascending order V
-5- For each element in the array, create cards
-*/

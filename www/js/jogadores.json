@@ -2,7 +2,7 @@
     {
         "nome": "Saint",
         "posicao": "atacante",
-        "foto": "https://fastly.picsum.photos/id/670/256/256.jpg?hmac=AQcI9oMre6RoI8M6yfTUTszGL71Bc1UPU68uO-KOjCk",
+        "foto": "assets/jogadores/provisorio/image12.png",
         "id": 1
     },
     {
@@ -32,31 +32,31 @@
     {
         "nome": "Darius",
         "posicao": "meio",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/provisorio/image1.png",
         "id": 6
     },
     {
         "nome": "Ash",
         "posicao": "meio",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/provisorio/image2.png",
         "id": 7
     },
     {
         "nome": "Terry",
         "posicao": "meio",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/provisorio/image3.png",
         "id": 8
     },
     {
         "nome": "Taiyo",
         "posicao": "meio",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/provisorio/image4.png",
         "id": 9
     },
     {
         "nome": "Agares",
         "posicao": "meio",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/provisorio/image5.png",
         "id": 10
     },
     {
@@ -68,19 +68,19 @@
     {
         "nome": "Zang",
         "posicao": "lateralE",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/provisorio/image6.png",
         "id": 12
     },
     {
         "nome": "Lala",
         "posicao": "zagueiro",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/provisorio/image7.png",
         "id": 13
     },
     {
         "nome": "Luke Ariel",
         "posicao": "zagueiro",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/provisorio/image8.png",
         "id": 14
     },
     {
@@ -92,7 +92,7 @@
     {
         "nome": "Summer",
         "posicao": "zagueiro",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/provisorio/image9.png",
         "id": 16
     },
     {
@@ -104,7 +104,7 @@
     {
         "nome": "Hope",
         "posicao": "lateralD",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/provisorio/image10.png",
         "id": 18
     },
     {
@@ -122,7 +122,7 @@
     {
         "nome": "Hiashi",
         "posicao": "goleiro",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/provisorio/image11.png",
         "id": 21
     },
     {

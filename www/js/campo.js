@@ -206,9 +206,6 @@ async function load() {
 load();
 
 /* 
-TODO: Animação quando não for aceito o escalamento por falta de jogadores
-TODO: Reimplementar tela inicial
-
+TODO: Reimplementar tela inicial - Eduardo
 TODO: Adicionar jogadores reais - Saske
-TODO: Adicionar tela de lista de jogadores - Cristovão
 */
