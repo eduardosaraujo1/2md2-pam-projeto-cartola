@@ -221,3 +221,50 @@ body {
     font-size: 1.2rem;
     z-index: 4;
 }
+
+/* Animação */
+#btn-montar-time {
+    transition: 0.4s linear;
+}
+
+#btn-montar-time.animate {
+    animation: shake 0.7s;
+    transition: 0.4s linear;
+    color: red;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(-15deg);
+    }
+    20% {
+        transform: rotate(15deg);
+    }
+    30% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    70% {
+        transform: rotate(-15deg);
+    }
+    80% {
+        transform: rotate(15deg);
+    }
+    90% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-15deg);
+    }
+}

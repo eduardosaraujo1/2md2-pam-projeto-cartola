@@ -44,12 +44,13 @@ class Campo {
         };
 
         this.redefinirCampoRender();
+        this.exportarCampo();
     }
 
     renderizarCampo() {
         for (let idLocalCampo in this.jogadoresEmCampo) {
             const idJogador = this.jogadoresEmCampo[idLocalCampo];
-            const jogador = jogadores.find((j) => j.id === idJogador);
+            const jogador = dadosJogadores.find((j) => j.id === idJogador);
             if (jogador == undefined) continue;
 
             const localCampo = document.getElementById(idLocalCampo);
@@ -76,6 +77,10 @@ class Campo {
             'situacaoCampo',
             JSON.stringify(campo.jogadoresEmCampo)
         );
+    }
+
+    completo() {
+        return !Object.values(this.jogadoresEmCampo).includes(0);
     }
 }
 
@@ -131,7 +136,7 @@ function criarCardJogador(jogador, localCampo) {
     cardContainer.appendChild(card);
 }
 
-async function obterDadosJogadores() {
+async function lerJogadoresJSON() {
     return await fetch('js/jogadores.json').then((response) => response.json());
 }
 
@@ -142,11 +147,30 @@ function removerJogadoresDuplicados(jogadoresLocais) {
 }
 
 function filtrarJogadorPorArea(posicaoJogador) {
-    return jogadores.filter((j) => j.posicao === posicaoJogador);
+    return dadosJogadores.filter((j) => j.posicao === posicaoJogador);
+}
+
+function visualizarEscalamento() {
+    if (campo.completo()) {
+        campo.exportarCampo();
+        location.href = 'timeMontado.html';
+    } else {
+        const btnMontarTime = document.querySelector('#btn-montar-time');
+        btnMontarTime.classList.add('animate');
+        setTimeout(() => {
+            btnMontarTime.classList.remove('animate');
+        }, 350);
+    }
+}
+
+function restaurarCampo(campoAnterior) {
+    campo.jogadoresEmCampo = campoAnterior;
+    campo.renderizarCampo();
 }
 
 async function load() {
-    jogadores = await obterDadosJogadores();
+    // ler dados jogadores
+    dadosJogadores = await lerJogadoresJSON();
 
     // abrir menu quando clicar em jogador
     const locaisCampo = document.querySelectorAll('.jogador-container');
@@ -164,6 +188,12 @@ async function load() {
         menuHandler.limparMenu();
     });
 
+    // restaurar campo se aplicavel
+    const campoAnterior = sessionStorage.getItem('situacaoCampo');
+    if (campoAnterior != null) {
+        restaurarCampo(JSON.parse(campoAnterior));
+    }
+
     // botões
     const btnReset = document.querySelector('#btn-reset');
     const btnMontarTime = document.querySelector('#btn-montar-time');
@@ -171,17 +201,13 @@ async function load() {
     btnReset.addEventListener('click', () => {
         campo.redefinirCampo();
     });
-
-    btnMontarTime.addEventListener('click', () => {
-        campo.exportarCampo();
-        location.href = 'timeMontado.html';
-    });
+    btnMontarTime.addEventListener('click', visualizarEscalamento);
 }
 load();
 
 /* 
-TODO: Interface para enviar status do campo para timemontado.html
-TODO: NÃO ESQUECA QUE QUANDO VOLTAR O TIME DEVE SER RESTAURADO AO SEU MODO COMO ESTAVA ANTES
+TODO: Animação quando não for aceito o escalamento por falta de jogadores
+TODO: Reimplementar tela inicial
 
 TODO: Adicionar jogadores reais - Saske
 TODO: Adicionar tela de lista de jogadores - Cristovão
