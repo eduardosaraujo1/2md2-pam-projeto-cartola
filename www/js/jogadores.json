@@ -8,25 +8,25 @@
     {
         "nome": "Chopper",
         "posicao": "atacante",
-        "foto": "https://fastly.picsum.photos/id/718/256/256.jpg?hmac=EZV6ytPGtGqkQ4KJpJvzTwjvlij_bFQAVqE1C03fPGY",
+        "foto": "assets/jogadores/Chopper.png",
         "id": 2
     },
     {
         "nome": "Toco Preto",
         "posicao": "atacante",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/TocoPreto.png",
         "id": 3
     },
     {
         "nome": "Capivara",
         "posicao": "atacante",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/Capibara.png",
         "id": 4
     },
     {
         "nome": "Bolsonaro",
         "posicao": "atacante",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/Bolsonaro.png",
         "id": 5
     },
     {
@@ -62,7 +62,7 @@
     {
         "nome": "Alan",
         "posicao": "lateralE",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/Alan.png",
         "id": 11
     },
     {
@@ -86,7 +86,7 @@
     {
         "nome": "Morzia",
         "posicao": "zagueiro",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/Morzia.png",
         "id": 15
     },
     {
@@ -98,7 +98,7 @@
     {
         "nome": "Yon Dino",
         "posicao": "zagueiro",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/YonDino.png",
         "id": 17
     },
     {
@@ -110,13 +110,13 @@
     {
         "nome": "Nicolas P.",
         "posicao": "lateralD",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/paulinhokkkkk.png",
         "id": 19
     },
     {
         "nome": "Pearl",
         "posicao": "goleiro",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/Pearl.png",
         "id": 20
     },
     {
@@ -128,7 +128,7 @@
     {
         "nome": "Aiko",
         "posicao": "goleiro",
-        "foto": "https://fastly.picsum.photos/id/617/256/256.jpg?hmac=yqBmqO_-ZiIeTZ79NXsJZfvYAYvMwZQ-Jzls3dCOJao",
+        "foto": "assets/jogadores/Aiko.png",
         "id": 22
     }
 ]
