@@ -153,7 +153,7 @@ function filtrarJogadorPorArea(posicaoJogador) {
 function visualizarEscalamento() {
     if (campo.completo()) {
         campo.exportarCampo();
-        location.href = 'timeMontado.html';
+        location.href = 'timemontado.html';
     } else {
         const btnMontarTime = document.querySelector('#btn-montar-time');
         btnMontarTime.classList.add('animate');
