@@ -22,6 +22,7 @@ class Campo {
             const icone = localCampo.querySelector('.jogador');
             const label = localCampo.querySelector('.jogador-label');
             icone.style.backgroundImage = '';
+            icone.style.backgroundColor = '';
             icone.value = '+';
             label.innerHTML = label.dataset.default;
         });
@@ -59,6 +60,7 @@ class Campo {
     renderizarJogador(jogador, localCampo) {
         const localCampoIcone = localCampo.querySelector('.jogador');
         localCampoIcone.style.backgroundImage = `url("${jogador.foto}")`;
+        localCampoIcone.style.backgroundColor = 'hsl(0, 0%, 90%)';
         localCampoIcone.value = '';
 
         const label = localCampo.querySelector('.jogador-label');
@@ -179,6 +181,7 @@ load();
 
 /* 
 TODO: Interface para enviar status do campo para timemontado.html
+TODO: NÃO ESQUECA QUE QUANDO VOLTAR O TIME DEVE SER RESTAURADO AO SEU MODO COMO ESTAVA ANTES
 
 TODO: Adicionar jogadores reais - Saske
 TODO: Adicionar tela de lista de jogadores - Cristovão
